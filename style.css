@@ -1,6 +1,6 @@
 /* фон сторінки, шрифт, колір, відступи */
 body {
-  background-color: #ffffff;
+  background-color: #c8ddf5;
   font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
@@ -61,7 +61,7 @@ th, td {
 
 /* стиль для заголовків таблиці */
 th {
-  background-color: #e7d5df;
+  background-color: #e7d7e0;
   font-weight: bold;
 }
 .paragraph {
