@@ -32,12 +32,13 @@ a[href^="http"] {
 /* список з квадратиками, фон, відступи */
 ul {
   list-style-type: square;
-  background-color: #bcdafa;
+  background-color: #94bfee;
   padding: 10px;
   border-radius: 8px;
   position: relative; 
 }
 
+/* нумерований список */
 ol {
   list-style-type: upper-roman;
   background-color: #bff8bf;
@@ -45,12 +46,47 @@ ol {
   border-radius: 8px;
 }
 
+/* список визначень */
+dl {
+  background-color: #fff3e0;
+  padding: 20px;
+  margin: 20px auto;
+  border: 1px solid #ffcc80;
+  border-radius: 10px;
+  width: 85%;
+  font-family: 'Segoe UI', sans-serif;
+}
 
+dt {
+  font-weight: bold;
+  color: #ef6c00;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+dd {
+  margin-left: 20px;
+  font-size: 16px;
+  color: #5d4037;
+}
+
+/* таблиця */
 table {
   width: 90%;
   border-collapse: collapse;
   background-color: #ffffff;
   margin: 20px auto;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+}
+
+#fifa-title {
+  color: #000655;
+  background-color: #afccf1;
+  padding: 10px;
+  text-align: center;
+  border: 2px solid #0f0066;
+  border-radius: 6px;
 }
 
 th, td {
@@ -59,21 +95,52 @@ th, td {
   text-align: center;
 }
 
-/* стиль для заголовків таблиці */
 th {
   background-color: #e7d7e0;
   font-weight: bold;
+  color: #1a237e;
+  font-size: 18px;
+  letter-spacing: 0.5px;
 }
+
+td {
+  background-color: #e8eaf6;
+}
+
+tr:nth-child(even) td {
+  background-color: #f3f4ff;
+}
+
+/* абзац із класом */
 .paragraph {
   font-size: 30px;
   color: #532121;
   text-align: justify;
 }
+
 /* ідентифікатор для заголовка контактної сторінки */
 #contact-title {
-  background-color: #ffffff;
+  background-color: #ffffff ;
+  padding: 10px ;
+  border: 2px solid #3128bb ;
+  border-radius: 8px ;
+  font-size: 26px ;
+}
+/* контекстний селектор: усі <a> всередині <p> */
+p a {
+  text-decoration: underline;
+  color: darkgreen;
+}
+
+/* дочірній селектор: <li>, що безпосередньо всередині <ul> */
+ul > li {
+  font-weight: bold;
+  color: #003300;
+}
+
+/* сусідній селектор: <p>, що йде одразу після заголовка <h2> */
+h2 + p {
+  background-color: #e6ffe6;
   padding: 10px;
-  border: 2px solid #070066;
-  border-radius: 8px;
-  font-size: 26px;
+  border-left: 4px solid #34b634;
 }
