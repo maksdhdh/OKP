@@ -6,7 +6,7 @@ body {
   line-height: 1.6;
   color: #000000;
   text-align: left;
-  position: relative; 
+  position: relative; /* Базове позиціонування */
 }
 
 /* стиль для заголовків */
@@ -14,7 +14,7 @@ h1, h2, h3, h4 {
   color: #003366;
   letter-spacing: 1px;
   text-align: center;
-  position: relative; 
+  position: relative;
 }
 
 /* стиль для посилань між вкладками */
@@ -23,8 +23,8 @@ a {
   text-decoration: none;
 }
 
-/*посилання  */
-a[href^="http"] {
+/*посилання */
+p a[href^="http"] {
   color: red !important;
   font-weight: bold;
 }
@@ -35,7 +35,7 @@ ul {
   background-color: #94bfee;
   padding: 10px;
   border-radius: 8px;
-  position: relative; 
+  position: relative;
 }
 
 /* нумерований список */
@@ -85,7 +85,7 @@ table {
   background-color: #afccf1;
   padding: 10px;
   text-align: center;
-  border: 2px solid #0f0066;
+  border: 2px solid #0a0066;
   border-radius: 6px;
 }
 
@@ -126,21 +126,80 @@ tr:nth-child(even) td {
   border-radius: 8px ;
   font-size: 26px ;
 }
-/* контекстний селектор: усі <a> всередині <p> */
+.contact-title {
+  background-color: #ffffff ;
+  padding: 10px ;
+  border: 2px solid #a5bb28 ;
+  border-radius: 8px ;
+  font-size: 26px ;
+}
+
+/* Контекстний селектор для <a> всередині <p> */
 p a {
   text-decoration: underline;
   color: darkgreen;
 }
 
-/* дочірній селектор: <li>, що безпосередньо всередині <ul> */
+/* Дочірній селектор: <li>, що безпосередньо всередині <ul> */
 ul > li {
   font-weight: bold;
-  color: #003300;
+  color: #970101;
 }
 
-/* сусідній селектор: <p>, що йде одразу після заголовка <h2> */
+/* Сусідній селектор для <p>, що йде одразу після заголовка <h2> */
 h2 + p {
   background-color: #e6ffe6;
   padding: 10px;
-  border-left: 4px solid #34b634;
+  border-left: 4px solid #298b29;
+}
+
+/* Плаваючі блоки */
+.floating-block {
+  float: left; /* Блоки плавають ліворуч */
+  width: 45%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin-right: 10px;
+  border: 2px solid #ddd;
+}
+
+/* Псевдоелементи для .floating-block */
+.floating-block::before {
+  content: "→ "; 
+  font-weight: bold;
+  color: #ff4081;
+}
+
+.floating-block::after {
+  content: " ←"; 
+  font-weight: bold;
+  color: #ff4081;
+}
+
+.normal-block {
+  clear: both;
+  background-color: #90cfda;
+  padding: 20px;
+  border: 2px solid #d6a458;
+}
+
+a:link {
+  color: blue; /* Колір для не відвіданих посилань */
+}
+
+a:visited {
+  color: purple; /* Колір для відвіданих посилань */
+}
+
+a:hover {
+  color: red; /* Колір для посилань при наведенні */
+}
+
+a:active {
+  color: green; /* Колір для посилань при натисканні */
+}
+
+h2:first-child {
+  font-style: italic; 
+
 }
